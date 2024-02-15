@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Menu with CSS </title>
+		
+		<link rel="stylesheet" href="css/mystyles.css" />
+		<script type="text/javascript" src="js/myjs.js"></script>
+		
+		
+<script>
+
+function popupfunction(x)
+
+{
+
+document.getElementById('popup'+x).style.display='block';
+
+document.getElementById('fade'+x).style.display='block';
+
+}
+
+
+
+function popupclose(x)
+
+{
+
+document.getElementById('popup'+x).style.display='none';
+
+document.getElementById('fade'+x).style.display='none';
+
+}
+function showcart()
+
+{
+
+document.getElementById('cart').style.display='block';
+
+
+
+}
+
+
+function addItem(n)
+
+{
+
+document.getElementById('cart').innerHTML += n;
+
+
+
+}
+
+
+
+</script>
+		
+		<style>
+			
+			.white_content
+
+			{
+					display:none;
+					position:absolute;
+					top:50px;
+					left:500px;
+					width:1080px;
+					height:600px;
+					background-color:#FFF;
+					z-index:1000;
+
+			}
+
+			.black_content
+
+			{
+
+					display:none;
+					position:absolute;
+					top:0%;
+					left:0%;
+					width:100%;
+					height:100%;
+					background-color:black;
+					opacity:.70;
+					z-index:1;
+
+			}
+			
+			ul
+			{
+				font-family: Arial;
+				list-style-type:none;
+				background-color:#c5c5c5;
+				height:46px;
+				overflow:hidden;
+			}
+			li
+			{
+				float:left;
+			}
+			li a, .drp
+			{
+				  display: inline-block;
+				  color: black;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration:none;
+				  
+			}
+			li .menu-item
+			{
+				
+				display:inline-block;
+			}
+			.menu-content
+			{
+				
+				display:none;
+				position:absolute;
+				background-color:#f8f8f8;
+				z-index:1;
+				
+				
+			}
+			.menu-content a {
+			  font-family: Arial;
+			  color: black;
+			  padding: 12px 16px;
+			  text-decoration: none;
+			  display: block;
+			  
+			}
+			.menu-content a:hover{
+			  background-color:#f8f8f8;
+			  
+			}
+			
+			.menu-item:hover .menu-content
+			{
+				display:block;
+				
+			}
+			
+			h1{
+				color:black;
+				font-family:"Brush Script MT", cursive;
+			}
+			
+			 .image-container {
+            position: relative; 
+            width: 500px; 
+            height: 300px; 
+             
+        }
+
+        .specific-area1 {
+            position: absolute; 
+            top: 0px; 
+            left: 10px; 
+           
+        }
+		.specific-area2 {
+            position: absolute; 
+            top: 0px; 
+            left: 1700px; 
+           
+        }
+		.specific-area3 {
+            position: absolute; 
+            top: 500px; 
+            left: 600px; 
+           
+        }
+		.specific-area4 {
+            position: absolute; 
+            top: -450px; 
+            left: 1810px; 
+           
+        }
+		
+		.cart_content{
+			display:none;
+			 position: absolute; 
+            top: 50px; 
+            left: 1820px; 
+		
+		
+		
+		}
+			
+		</style>
+	</head>
+
+
+	<body style="background-image: url('img/backround.jfif');">
+		<br><br><br>
+	
+	
+	<h1 align="center"> Online Pet Shop </h1>
+	
+	
+	<ul>
+		<li class="menu-item"><a href="#" class="drp">Reptiles </a>
+			<div class="menu-content">
+				
+				<a  href="add_book.php">Tortises</a><br>
+				<a  href="remove_book.php">Lizards</a><br>
+				<a href="display_books.php">Snakes</a><br>
+			</div>
+		
+		</li>
+		
+		<li class="menu-item"><a href="#" class="drp">Exotic Animals </a>
+		<div class="menu-content">
+			<a  href="add_book.php">Sugar Glider</a><br>
+			<a  href="remove_book.php">Capybara</a><br>
+			<a href="display_books.php">Axolotl</a><br>
+			<a href="display_books.php">Dont click</a><br>
+		</div>
+		
+		</li>
+		
+		<li class="menu-item"><a href="#" class="drp">Users </a>	
+		<div class="menu-content">
+			<a href="add_user.php">Add User</a><br>
+			<a href="remove_user.php">Remove User</a><br>
+			<a href="display_users.php">Display all Users</a><br>
+		</div>
+		</li>
+	</ul>
+	<p align="center"> Welcome to my Online store - Here are the deals of the week!<p>
+<!--IMAGESxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+	<table align="center">
+		<tr>
+			<td> <img src="img\giraffe.jpg" onclick="popupfunction('2')"/><br>Giraffes!  <button style="width: 100px; height:20px" onclick="addItem('Giraffe  ')">Add To Cart!</button></td>
+			
+			
+			<td> <img src="img\redpanda.jfif" onclick="popupfunction('3')"/><br>Red Panda! <button style="width: 100px; height:20px" onclick="addItem('Red Panda  ')">Add To Cart!</button></td></td>
+			
+			<td> <img src="img\lion.jpg" width="200" height="180" onclick="popupfunction('4')"/><br>Cute Lion! <button style="width: 100px; height:20px" onclick="addItem('Lion  ')">Add To Cart!</button></td></td>
+			
+			<td> <img src="img\bunnys.jpg" width="200" height="180" onclick="popupfunction('5')"/><br>Bunny/Chick Combo! <button style="width: 100px; height:20px" onclick="addItem('Bun/Chk_Comb   ')">Add To Cart!</button></td></td>
+			
+			<td> <img src="img\sloth.jpg" width="200" height="180" onclick="popupfunction('6')"/><br>Sloth! <button style="width: 100px; height:20px" onclick="addItem('Sloth   ')">Add To Cart!</button></td></td>
+		</tr>
+	</table>
+	
+	<div id="cart" width="100" height="100" class="cart_content" > </div>
+
+
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+<div id="popup2" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img\giraffe.jpg" /><br>Giraffe<br><br>Price:$5000 (each)<br>Difficulty rating:6/10 <br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('2')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade2" class="black_content"></div>
+<!--image2-->
+<div id="popup3" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img\redpanda.jfif" /><br>Red Panda!<br><br>Price:$8000<br>Difficulty rating:8/10 <br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('3')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade3" class="black_content"></div>
+<!--image3-->
+<div id="popup4" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img\lion.jpg" /><br>Cute Lion!<br><br>Price:$3<br>Difficulty rating:1/10 <br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('4')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade4" class="black_content"></div>
+
+<!--image4-->
+<div id="popup5" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img\bunnys.jpg" /><br>Limited Time Combo!<br><br>Price:$45<br>Difficulty rating:3/10 <br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('5')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade5" class="black_content"></div>
+
+<!--image5-->
+<div id="popup6" class="white_content">
+
+<p align=center><br><br>
+
+<img src="img\sloth.jpg" /><br>Sloth!<br><br>Price:$4000<br>Difficulty rating:2/10 <br>
+
+<a href = "javascript:void(0)" onclick = "popupclose('6')" class=linktext>close window</a>
+
+</p>
+
+</div>
+
+<div id="fade6" class="black_content"></div>
+	
+	
+	
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+		</center>
+ <div class="image-container">
+        <img src="img/ad1.png" class="specific-area1" alt="Image">
+		<img src="img/ad2.png" class="specific-area2" alt="Image">
+		<img src="img/ad3.png" class="specific-area3" alt="Image">
+		<img src="img/cart.png" width="80" height="80" class="specific-area4" onclick = "showcart()" alt="Image">
+	
+	</body>
+</html>
